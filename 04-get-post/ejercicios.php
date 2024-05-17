@@ -13,17 +13,17 @@
     </form>
    
     <?php 
-    $edad = $_GET["edad"];
-
     echo "<br>";
-    if ($edad >= 18) {
-      echo "Mayor de edad";
-    } else {
-     echo "Menor de edad";
-    }
+    if(isset($_GET["edad"])) {
+        $edad = $_GET["edad"];
+        if ($edad >= 18) {
+        echo "Mayor de edad";
+        } else {
+        echo "Menor de edad";
+        }        
+    } 
     echo "<br>";
     ?>
-    
     <br>
     <!-- EJERCICIO 2 -->
     <form action="" method="post">
@@ -33,6 +33,7 @@
     </form>
 
     <?php
+    if(isset($_POST["horas"])) {
         $horas = $_POST["horas"];
         $valor = $_POST["valor"];
 
@@ -47,24 +48,59 @@
         } else {
             echo "No debe pagar.";
         }
+    }
+
     ?>
     <br>
     <!-- EJERCICIO 3 -->
     <br>
-
     <form action="" method="post">
-        <input type="text" placeholder="ingrese un numero" name="numero[]" placeholder="numero1">
-        <input type="text" placeholder="ingrese un numero" name="numero[]" placeholder="numero3">
-        <input type="text" placeholder="ingrese un numero" name="numero[]" placeholder="numero3">
+        <input type="text" placeholder="ingrese un numero" name="numero1">
+        <input type="text" placeholder="ingrese un numero" name="numero2">
+        <input type="text" placeholder="ingrese un numero" name="numero3">
+        <input type="submit" value="Submit">
+    </form>
+        
+    <?php
+
+        if(isset($_POST["numero1"])){
+
+            $numero1 = $_POST["numero1"];
+            $numero2 = $_POST["numero2"];
+            $numero3 = $_POST["numero3"];
+    
+            echo (max($numero1, $numero2, $numero3));
+        }
+    ?>
+    <br>
+    <!-- EJERCICIO 4 -->
+    <br>
+    <form action="" method="post">
+        Metros a pintar: <input type="text" placeholder="Metros Cuadrados" name="metros">
+        <br>
+        <br>
+        <label for="pregunta">Elija el tipo de superficie</label>
+        <br>
+        <label for="Estucado">Estucado</label>
+        <input type="radio" name="Superficie" value="Estucado">
+        <label for="Sin estucar">Sin estucar</label>
+        <input type="radio" name="Superficie" value="Sin estucar">
+        <br>
+        <br>
         <input type="submit" value="Submit">
     </form>
 
-    <?php 
-    $numero = array ($_POST["numero"]);
-
-    foreach ($numero as $orden) {
-        sort($orden);
-        echo $orden . ",";
+    <?php
+    if(isset($_POST ["metros"])) {
+        $metros = $_POST ["metros"];
+        $superficie = $_POST["Superficie"];
+        echo "<br>";
+    
+        if ($superficie == "Estucado") {
+            echo "Valor a pagar: " . $metros * 2000 + 15000;
+        } else {
+            echo "Valor a pagar: " . $metros * 4000 + 15000;
+        }
     }
     ?>
 
