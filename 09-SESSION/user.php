@@ -10,9 +10,9 @@ session_start();
     <title>User Page</title>
 </head>
 <body>
-    <?php if ($_SESSION) : ?>
+    <?php if (isset($_SESSION['userRegister'])) : ?>
 
-        <h1>Bienvenido <?php echo $_SESSION["nombre"];?> a tu País <?php ?> </h1>
+        <h1>Bienvenido a la pagina, <?php echo $_SESSION['userRegister'];?>  <?php ?> </h1>
         <a href="./cerrar.php">Cerrar Sesión</a>
         <a href="./index.php">Home</a>
 
