@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+.banner{
+    width: 100%;
+    background-image: url(./img/Recurso\ 4.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.4rem;
+    color: white;
+}
+.left h1{
+    font-size: 70px;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 30px;
+    gap: 2rem;
+    align-items: end;
+    margin-right: 15px;
+}
+.banner img{
+    width: 180px;
+    margin: 1.6rem 1.2rem;
+}
+.content{
+    padding-top: 7rem;
+}
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cuerpo img{
+    width: 80px;
+    padding-bottom: 20px;
+}
+textarea{
+    background-color: #EDE4E6;
+    border-radius: 10px;
+    text-indent: 15px;
+}
+.publicacion{
+    padding-top: 20px;
+}
+.boton{
+    background-color: #E0466B;
+    padding: 12px 70px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+    text-align: center;
+}
+.publish{
+    background-color: #E0466B;
+    padding: 6px 50px;
+    border-radius: 30px;
+    color: white;
+    font-size: medium;
+}
+.cerrar{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3rem;
+}
+.no{
+    color: #E0466B;
+    font-weight: bold;
+    text-align: center;
+}
+.inicio{
+    background-color: #E0466B;
+    padding: 12px 70px;
+    border-radius: 30px;
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    text-decoration: none;
+}
+#boton{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.texto{
+    position: absolute;
+}
+.texto p{
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color: #E0466B;
+    background-color: rgba(224, 70, 106, 0.2);
+    padding: 3px 3px;
+    border-radius: 10px;    
+    padding: 5px;
+    top: 2rem;
+    left: 26rem;
+}

@@ -1,6 +1,6 @@
-<?php  session_start();
-         
-if( $_SERVER["REQUEST_METHOD"] == 'POST' ){
+<?php session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
     $usuario = $_POST['username'];
     $password = $_POST['password'];
@@ -8,29 +8,28 @@ if( $_SERVER["REQUEST_METHOD"] == 'POST' ){
     $user_register = isset($_SESSION['userRegister']) ? $_SESSION['userRegister'] : null;
     $pass_register = isset($_SESSION['passRegister']) ? $_SESSION['passRegister'] : null;
 
-    if( empty($usuario) or empty($password) ){
+    if (empty($usuario) or empty($password)) {
         echo '<div class="mensaje">
                 <h5>Usuario o Contraseña incorrectos</h5>
             </div>';
     } else {
         try {
-            $conexion = new PDO('mysql: host=localhost; dbname=focaapp', 'root','');
+            $conexion = new PDO('mysql: host=localhost; dbname=focaapp', 'root', '');
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
 
         $statement = $conexion->prepare("SELECT * FROM `usersapp` WHERE username = :username AND contraseña = :password");
 
-        $statement->execute(array(':username'=> $usuario, ':password'=> $password));
+        $statement->execute(array(':username' => $usuario, ':password' => $password));
 
-        $result = $statement ->fetch();
+        $result = $statement->fetch();
 
-        if($result){
+        if ($result) {
             echo 'true';
             $_SESSION['userRegister'] = $usuario;
             $_SESSION['passRegister'] = $password;
             header('location: user.php');
-            
         } else {
             echo '<div class="mensaje">
                     <h5>Usuario o Contraseña incorrectos</h5>
@@ -42,6 +41,7 @@ if( $_SERVER["REQUEST_METHOD"] == 'POST' ){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,4 +82,8 @@ if( $_SERVER["REQUEST_METHOD"] == 'POST' ){
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
