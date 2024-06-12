@@ -35,11 +35,11 @@
     <section class="container-fluid content">
         <div class="row">
             <div class="col-2">
-                <div class="dropdown ">
+                <div class="dropdown">
                     <button class="dropdown-toggle filters" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filtrar
                         por</button>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
+                    <ul class="dropdown-menu menu" style="background-color: #19181D;">
+                        <li class="dropdown-item" style="color: #726F82; text-decoration: none;">
                             <a href="">Principiante</a>
                         </li>
                         <li class="dropdown-item">
@@ -55,7 +55,7 @@
                 <div class="dropdown">
                     <button class="dropdown-toggle filters" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ordenar
                         por</button>
-                    <ul class="dropdown-menu menu">
+                    <ul class="dropdown-menu">
                         <li class="dropdown-item">
                             <a href="">Nuevo-viejo</a>
                         </li>
