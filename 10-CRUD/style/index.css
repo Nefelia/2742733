@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: CenturyGothic;
+    src: url('./fonts/GOTHIC.TTF');
+}
+@font-face {
+    font-family: CenturyGothicB;
+    src: url('./fonts/GOTHICB.TTF');
+}
+/* Header */
+.header{
+    background-color: #19181D;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.logo-header{
+    background-image: url(./img/Recurso\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 120px;
+    width: 180px;
+}
+.search{
+    border: 3px #E41476 solid;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #E41476;
+    padding: 5px 10px;
+    font-size: larger;
+}
+::placeholder{
+    color: #E41476;
+}
+.usuario{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3.5rem;
+}
+.inicio{
+    color: #E41476;
+    text-decoration: none;
+    font-family: CenturyGothicB;
+    font-size: x-large;
+}
+.registro{
+    color: #EEEF04;
+    text-decoration: none;
+    font-family: CenturyGothicB;
+    font-size: x-large;
+    background-color: #E41476;
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+/* Footer */
+.footer{
+    background: #19181D;
+    color: #726F82;
+ 
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.logo-footer{
+    background-image: url(./img/Recurso\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 180px;
+}
+.copyright{
+    text-align: left;
+}
+.x, .inst, .google, .wsp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.x, .inst{
+    padding-left: 80px;
+}
+.ix, .iinst, .igoogle, .iwsp{
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+/* Body */
+.content{
+    background-color: #2F2C38 ;
+}
+.filters{
+    border: none;
+    background-color: #19181D;
+    color: #EEEF04;
+    font-family: CenturyGothic;
+    border-radius: 15px;
+    padding: 5px;
+}
+.menu{
+    text-decoration: none;
+    background-color: #19181D;
+    color: #726F82;
+}
