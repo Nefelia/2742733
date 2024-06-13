@@ -5,11 +5,11 @@
 }
 @font-face {
     font-family: CenturyGothic;
-    src: url('./fonts/GOTHIC.TTF');
+    src: url('../componentes/fonts/GOTHIC.TTF');
 }
 @font-face {
     font-family: CenturyGothicB;
-    src: url('./fonts/GOTHICB.TTF');
+    src: url('./componentes/fonts/GOTHICB.TTF');
 }
 /* Header */
 .header{
@@ -60,4 +60,50 @@
     background-color: #E41476;
     padding: 8px 20px;
     border-radius: 15px;
+}
+/* footer */
+.footer{
+    background: #19181D;
+    color: #726F82;
+ 
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.logo-footer{
+    background-image: url(./img/Recurso\ 4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 180px;
+}
+.copyright{
+    text-align: left;
+}
+.x, .inst, .google, .wsp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.x, .inst{
+    padding-left: 80px;
+}
+.ix, .iinst, .igoogle, .iwsp{
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+/* Body */
+.course{
+    background-color: #2F2C38;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    font-family: CenturyGothicB;
+}
+.btncrear{
+    background-color: #35E2EF;
+    color: #2F2C38;
+    text-decoration: none;
 }

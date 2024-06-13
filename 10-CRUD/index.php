@@ -10,36 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+<?php require('./componentes/header.php'); ?>
+
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container-fluid text-center">
-            <div class="row header">
-                <div class="col-1">
-                    <div class="logo-header">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form">
-                        <input type="search" class="form-input search" placeholder="BUSCAR...">
-                    </div>
-                </div>
-                <div class="col-6 usuario">
-                    <a href="" class="inicio">INICIAR SESIÓN</a>
-                    <a href="" class="registro">REGISTRARSE</a>
-                </div>
-            </div>
-        </div>
-    </header>
     <!-- Body -->
     <section class="container-fluid content">
-        <div class="row">
+        <div class="row listas">
             <div class="col-2">
                 <div class="dropdown">
                     <button class="dropdown-toggle filters" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filtrar
                         por</button>
-                    <ul class="dropdown-menu menu" style="background-color: #19181D;">
-                        <li class="dropdown-item" style="color: #726F82; text-decoration: none;">
+                    <ul class="dropdown-menu" style="background-color: #19181D;">
+                        <li class="dropdown-item">
                             <a href="">Principiante</a>
                         </li>
                         <li class="dropdown-item">
@@ -55,7 +37,7 @@
                 <div class="dropdown">
                     <button class="dropdown-toggle filters" type="button" data-bs-toggle="dropdown" aria-expanded="false">Ordenar
                         por</button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="background-color: #19181D;">
                         <li class="dropdown-item">
                             <a href="">Nuevo-viejo</a>
                         </li>
@@ -78,23 +60,26 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="card">
+        <div class="row cursos justify-content-around">
+            <div class="col-5">
+                <div class="card" style="background-color: #19181D; width: 34rem; padding-right: 20px; border-radius: 20px;">
                     <div class="row g-0">
                         <div class="col">
                             <img src="" alt="" class="img-fluid rounded-start">
                         </div>
                         <div class="col">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso ..</h5>
-                                <img src="" alt="" class="perfil">
-                                <p>Juan Cárdenas</p>
+                            <div class="card-body tarjeta">
+                                <h5 class="card-title" style="color: #35E2EF; font-family: CenturyGothicB;">Curso ..
+                                </h5>
+                                <div class="perfil">
+                                    <img src="./style/img/circulo.png" alt="" class="img-perfil">
+                                    <p>Juan Cárdenas</p>
+                                </div>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit magni,
-                                    maxime reiciendis ipsa officiis maiores asperiores illo cumque eaque.
+                                    maxime reiciendis ipsa officiis.
                                 </p>
-                                <div>
+                                <div class="mini-info">
                                     <p class="card-text">
                                         <small>20 estudiantes</small>
                                     </p>
@@ -102,28 +87,30 @@
                                         <small>3.7 Clasificación</small>
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
+            <div class="col-5">
+                <div class="card" style="background-color: #19181D; width: 34rem; padding-right: 20px; border-radius: 20px;">
                     <div class="row g-0">
                         <div class="col">
                             <img src="" alt="" class="img-fluid rounded-start">
                         </div>
                         <div class="col">
-                            <div class="card-body">
-                                <h5 class="card-title">Curso ..</h5>
-                                <img src="" alt="" class="perfil">
-                                <p>Juan Cárdenas</p>
+                            <div class="card-body tarjeta">
+                                <h5 class="card-title" style="color: #35E2EF; font-family: CenturyGothicB;">Curso ..
+                                </h5>
+                                <div class="perfil">
+                                    <img src="./style/img/circulo.png" alt="" class="img-perfil">
+                                    <p>Juan Cárdenas</p>
+                                </div>
                                 <p class="card-text">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit magni,
-                                    maxime reiciendis ipsa officiis maiores asperiores illo cumque eaque.
+                                    maxime reiciendis ipsa officiis.
                                 </p>
-                                <div>
+                                <div class="mini-info">
                                     <p class="card-text">
                                         <small>23 estudiantes</small>
                                     </p>
@@ -138,48 +125,9 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer>
-        <div class="container-fluid text-center">
-            <div class="row footer">
-                <div class="col-4 copyright">
-                    <p>Copyright</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tempora modi optio provident,
-                        eum vero qui quam impedit quos, consequuntur libero nam beatae. Repellendus eos minus maiores
-                        illo deserunt eius.</p>
-                </div>
-                <div class="row row-cols-2 col-6 redes">
-                    <div>
-                        <div class="x">
-                            <i class="fa-brands fa-x-twitter ix" style="color: #e41476;"></i>
-                            <p>@musica123</p>
-                        </div>
-                        <div class="inst">
-                            <i class="fa-brands fa-instagram iinst" style="color: #e41476;"></i>
-                            <p>musica123</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div class="google">
-                                <i class="fa-brands fa-google igoogle" style="color: #e41476;"></i>
-                                <p>musica123@gmail.com</p>
-                            </div>
-                            <div class="wsp">
-                                <i class="fa-brands fa-whatsapp iwsp" style="color: #e41476;"></i>
-                                <p>(##)123-456 123</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="logo-footer"></div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <?php require('./componentes/footer.php') ?>
+    
 </body>
 
 </html>
