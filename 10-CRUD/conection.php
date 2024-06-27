@@ -1,8 +1,7 @@
 <?php session_start();
 
 try{
-    $conexion = new PDO('mysql: hosto=localhost; dbname=focaap', 'root', '');
-    echo "conexión ok";
+    $conexion = new PDO('mysql: host=localhost; dbname=focaapp', 'root', '');
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }

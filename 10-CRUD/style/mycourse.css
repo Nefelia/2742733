@@ -112,15 +112,6 @@
   gap: 15px;
 }
   .btncrear {
-    background-color: #35E2EF;
-    color: #2F2C38;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: 5px 65px;
-    font-family: CenturyGothicB;
-    font-size: x-large;
-  }
-  .btnmis{
     border: 3px solid #35E2EF;
     color: #35E2EF;
     text-decoration: none;
@@ -129,70 +120,69 @@
     font-family: CenturyGothicB;
     font-size: x-large;
   }
-.ttl {
-  color: #35E2EF;
-  font-family: CenturyGothicB;
-  font-size: xx-large;
+  .btnmis{
+    background-color: #35E2EF;
+    color: #2F2C38;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 5px 65px;
+    font-family: CenturyGothicB;
+    font-size: x-large;
   }
-.form_div{
-  display: flex;
-  justify-content: center;
+.tabla{
+  margin-top: 50px;
 }
-
-  .form_div .label {
-    color: #726F82;
-    font-family: CenturyGothic;
+tbody{
+  background-color: #2F2C38;
+}
+  .title{
+    color: #EEEF04 !important;
+    background-color: #19181D !important;
+    font-family: CenturyGothicB;
     font-size: large;
-    margin-bottom: 10px;
   }
-  .form_div input{
-    margin-bottom: 15px;
-  }
-  #titulo, #estudiantes {
-      height: 3rem;
-      width: 20rem;
-      background-color: transparent;
-      border: 3px solid #EEEF04;
-      color: #EEEF04;
-      font-family: CenturyGothic;
-      font-size: large;
-      border-radius: 15px;
-      text-indent: 20px;
+  .id{
+    color: #EEEF04 !important;
+    background-color: #19181D !important;
+    font-family: CenturyGothicB;
+    font-size: large;
   }
   .img{
-    height: 3rem;
-    width: 20rem;
-    text-indent: 10px;
-    margin-bottom: 10px;
+    background-color: #2E0DB7 !important;
   }
-  textarea {
-    background-color: transparent;
-    color: #EEEF04;
+  .cursoname{
+    color: #35E2EF !important;
+    background-color: #19181D !important;
     font-family: CenturyGothic;
     font-size: large;
-    border: 3px solid #EEEF04;
-    border-radius: 15px;
-    text-indent: 15px;
   }
-  #clasificacion{
-    height: 3rem;
-    width: 20rem;
-    background-color: #19181D;
-    border: 1px solid #19181D;
-    border-radius: 15px;
-    color: #EEEF04;
+  .desc{
+    color: #726F82 !important;
+    background-color: #2F2C38 !important;
     font-family: CenturyGothic;
-    font-size: large;
-    text-indent: 10px;
-    margin-bottom: 10px;
+    font-size: medium;
   }
-  .submitbtn{
+  .estd{
+    color: #726F82 !important;
+    background-color: #2F2C38 !important;
+    font-family: CenturyGothic;
+    font-size: medium;
+  }
+  .acciones{
+    background-color: #2F2C38 !important;
+  }
+  .btntabla{
     background-color: #E41476;
-    color: #EEEF04;
     border: none;
     border-radius: 15px;
     padding: 10px 30px;
     font-family: CenturyGothicB;
     font-size: larger;
-    margin-left: 6rem;
+    text-decoration: none !important;
+    margin-bottom: 10px;
   }
+    .btn a {
+      text-decoration: none !important;
+      color: #EEEF04 !important;
+    }
+

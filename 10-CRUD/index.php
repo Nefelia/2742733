@@ -1,3 +1,8 @@
+<?php
+require('conection.php')
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,69 +82,48 @@
         </div>
       </div>
     </div>
-    <div class="row cursos justify-content-around">
-      <div class="col-5">
-        <div class="card" style="background-color: #19181D; width: 34rem; padding-right: 20px; border-radius: 20px;">
-          <div class="row g-0">
-            <div class="col">
-              <img src="" class="img-fluid rounded-start">
-            </div>
-            <div class="col">
-              <div class="card-body tarjeta">
-                <h5 class="card-title" style="color: #35E2EF; font-family: CenturyGothicB;">Curso ..
-                </h5>
-                <div class="perfil">
-                  <img src="./style/img/Placeholder.png" class="img-perfil">
-                  <p>Juan Cárdenas</p>
+    <div class="row cursos row-cols-2 justify-content-around">
+
+      <?php
+      $statement = $conexion->prepare("SELECT * FROM cursos");
+      $statement->execute();
+      $result = $statement->fetchAll();
+
+      foreach ($result as $item) { ?>
+
+        <div class="col-3">
+          <a class="no-link" href="producto.php?id=<?php echo $item['id'] ?>">
+            <div class="card" style="background-color: #19181D; width: 34rem; padding-right: 20px; border-radius: 20px;">
+              <div class="row g-0">
+                <div class="col">
+                  <img src="<?php echo $item['imagen'] ?>" class="img-fluid rounded-start">
                 </div>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit magni,
-                  maxime reiciendis ipsa officiis.
-                </p>
-                <div class="mini-info">
-                  <p class="card-text">
-                    <small>20 estudiantes</small>
-                  </p>
-                  <p class="card-text">
-                    <small>3.7 Clasificación</small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-5">
-        <div class="card" style="background-color: #19181D; width: 34rem; padding-right: 20px; border-radius: 20px;">
-          <div class="row g-0">
-            <div class="col">
-              <img src="" class="img-fluid rounded-start">
-            </div>
-            <div class="col">
-              <div class="card-body tarjeta">
-                <h5 class="card-title" style="color: #35E2EF; font-family: CenturyGothicB;">Curso ..
-                </h5>
-                <div class="perfil">
-                  <img src="./style/img/Placeholder.png" class="img-perfil">
-                  <p>Juan Cárdenas</p>
-                </div>
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium suscipit magni,
-                  maxime reiciendis ipsa officiis.
-                </p>
-                <div class="mini-info">
-                  <p class="card-text">
-                    <small>23 estudiantes</small>
-                  </p>
-                  <p class="card-text">
-                    <small>3.6 Clasificación</small>
-                  </p>
+                <div class="col">
+                  <div class="card-body tarjeta">
+                    <h5 class="card-title" style="color: #35E2EF; font-family: CenturyGothicB;">
+                      Curso <?php echo $item['titulo'] ?>
+                    </h5>
+                    <div class="perfil">
+                      <img src="./style/img/Placeholder.png" class="img-perfil">
+                      <p>Juan Cárdenas</p>
+                    </div>
+                    <p class="card-text">
+                      <?php echo $item['descripcion'] ?>
+                    </p>
+                    <div class="mini-info">
+                      <p class="card-text">
+                        <small><?php echo $item['estudiantes'] ?> estudiantes</small>
+                      </p>
+                      <p class="card-text">
+                        <small>3.7 Clasificación</small>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          <?php }  ?>
         </div>
-      </div>
     </div>
   </section>
   <footer>
