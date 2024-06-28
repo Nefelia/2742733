@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: CenturyGothic;
+  src: url('./fonts/GOTHIC.TTF');
+}
+@font-face {
+  font-family: CenturyGothicB;
+  src: url('./fonts/GOTHICB.TTF');
+}
+.ttl {
+  color: #35E2EF;
+  font-family: CenturyGothicB;
+  font-size: xx-large;
+  margin-top: 25px;
+}
+.form_div {
+  display: flex;
+  justify-content: center;
+}
+  .form_div .label {
+    color: #726F82;
+    font-family: CenturyGothic;
+    font-size: large;
+    margin-bottom: 10px;
+  }
+  .form_div input {
+    margin-bottom: 15px;
+  }
+  #titulo1,
+  #estudiantes {
+    height: 3rem;
+    width: 20rem;
+    background-color: transparent;
+    border: 3px solid #EEEF04;
+    color: #EEEF04;
+    font-family: CenturyGothic;
+    font-size: large;
+    border-radius: 15px;
+    text-indent: 20px;
+  }
+  .img {
+    height: 3rem;
+    width: 20rem;
+    text-indent: 10px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    background-color: transparent;
+    color: #EEEF04;
+    font-family: CenturyGothic;
+    font-size: large;
+    border: 3px solid #EEEF04;
+    border-radius: 15px;
+    text-indent: 15px;
+  }
+  #clasificacion {
+    height: 3rem;
+    width: 20rem;
+    background-color: #19181D;
+    border: 1px solid #19181D;
+    border-radius: 15px;
+    color: #EEEF04;
+    font-family: CenturyGothic;
+    font-size: large;
+    text-indent: 10px;
+    margin-bottom: 10px;
+  }
+  .submitbtn {
+    background-color: #E41476;
+    color: #EEEF04;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-family: CenturyGothicB;
+    font-size: larger;
+    margin-left: 6rem;
+  }

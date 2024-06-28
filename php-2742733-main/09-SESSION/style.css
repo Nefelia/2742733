@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#username, #email, #password, #confirm{
+    background-color: #EDE4E6;
+    border-radius: 10px;
+    height: 60px;
+    width: 22rem;
+}
+.boton{
+    background-color: #E0466B;
+    padding: 12px 70px;
+    border-radius: 30px;
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+.fondo{
+    background-image: url(./img/Recurso\ 3.png);
+    background-repeat: no-repeat;
+}
+.title{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 100%;
+}
+.title h1{
+    color: white;
+    font-size: 4rem;
+}
+.tarjeta{
+    height:640px;
+}
+.tarjeta h1{
+    color: #E0466B;
+    margin-top: 25px;
+    font-weight: bold;
+}
+i{
+    width: 40px;
+    height: 45px;
+}
+.formulario i{
+    position: relative;
+}
+.icono{
+    top: 4.7rem;
+    right: 9.2rem;
+}
+.formulario input{
+    text-indent: 50px;
+}
+.inactive{
+    background-color: #EDE4E6;
+}
+.mensaje{
+    color: #E0466B;
+    background-color: rgba(224, 70, 106, 0.2);
+    padding: 3px 3px;
+    border-radius: 10px;
+    position: absolute;
+    right: 11.8rem;
+    top: 8rem;
+}
+.mensaje h5{
+    position: relative;
+}
+.formulario2{
+    margin-top: 50px;
+}
+.boton2{
+    margin-top: 25px;
+}
