@@ -63,14 +63,14 @@ require('conection.php')
           foreach ($result as $item) {
           ?>
             <tr>
-              <th scope="row" class="id"><?php echo $item['id'] ?></th>
+              <th scope="row" class="id"><?php echo $item['ID'] ?></th>
               <td class="img"> <img src="<?php echo $item['imagen'] ?>" width="100"></td>
-              <td class="cursoname"> <?php echo $item['titulo'] ?></td>
+              <td class="cursoname"> <?php echo $item['curso'] ?></td>
               <td class="desc"> <?php echo $item['descripcion'] ?></td>
               <td class="estd"> <?php echo $item['estudiantes'] ?></td>
               <td class="d-flex gap-4 acciones">
-                <a href="editcourse.php?id=<?php echo $item['id'] ?>"><i class="fa-solid fa-pen-to-square" style="color: #e41476;"></i></a>
-                <a href="deletecourse.php?id=<?php echo $item['id'] ?>"><i class="fa-solid fa-trash" style="color: #e41476;"></i></a>
+                <a href="editcourse.php?id=<?php echo $item['ID'] ?>"><i class="fa-solid fa-pen-to-square" style="color: #e41476;"></i></a>
+                <a href="deletecourse.php?id=<?php echo $item['ID'] ?>"><i class="fa-solid fa-trash" style="color: #e41476;"></i></a>
               </td>
             </tr>
           <?php } ?>

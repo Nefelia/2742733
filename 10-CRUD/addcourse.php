@@ -1,24 +1,22 @@
-<?php
-
-require('conection.php');
+<?php require('conection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo 'datos enviados';
 
-    $tituloCurso = $_POST['titulo']['tmp_name'];
-    $imagenCurso = $_POST['imagen'];
-    $nombreImagen = $_POST['imagen']['name'];
+    $tituloCurso = $_POST['titulo'];
+
+    $imagenCurso = $_FILES['imagen']['tmp_name'];
+    $nombreImagen = $_FILES['imagen']['name'];
     $tipoImagen = pathinfo($nombreImagen, PATHINFO_EXTENSION);
     $sizeImg = $_FILES['imagen']['size'];
     $directorio = "img/";
+
     $descripcion = $_POST['descripcion'];
     $estudiantes = $_POST['estudiantes'];
 
     if ($tipoImagen == 'jpg' or $tipoImagen == 'jpeg' or $tipoImagen == 'png') {
-        $statement = $conexion->prepare("INSERT INTO cursos(`imagen`, `curso`, `descripción`, `estudiantes`) 
-        VALUES ('',?,?,?)");
-
-        $statement->execute(array($tituloCurso, $descripcion, $estudiantes));
+        $statement = $conexion->prepare("INSERT INTO cursos (imagen, curso, descripcion, estudiantes) VALUES ('',?,?,?)");
+         $statement->execute(array($tituloCurso, $descripcion, $estudiantes));
         $idRegistro = $conexion->lastInsertId();
 
         $ruta = $directiorio . $idRegistro . '.' . $tipoImagen;
@@ -35,9 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['mensaje'] = 'Archivo no compatible';
             $_SESSION['color'] = '#E41476';
 
-            header('Locatiom: user.php');
+            header('locatiom: user.php');
         }
     }
 }
-echo "Nombre del archivo: " . $nombreImagen . "<br>";
-echo "Formato: " . $tipoImagen;
